@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         getPages: AppPages.pages,
         theme: ThemeData(
           scaffoldBackgroundColor: AppColors.primaryWhite,
+          appBarTheme: AppBarTheme(backgroundColor: AppColors.primaryWhite),
           fontFamily: GoogleFonts.inter().fontFamily,
         ),
       ),

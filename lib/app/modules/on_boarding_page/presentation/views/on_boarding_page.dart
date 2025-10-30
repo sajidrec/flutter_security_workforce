@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_security_workforce/app/core/constants/app_assets.dart';
 import 'package:flutter_security_workforce/app/core/constants/app_colors.dart';
+import 'package:flutter_security_workforce/app/routes/app_routes.dart';
+
+import 'package:get/get.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
@@ -119,7 +122,9 @@ class OnBoardingPage extends StatelessWidget {
                         style: TextStyle(color: AppColors.primaryWhite),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.toNamed(AppRoutes.signupRoute);
+                        },
                         child: Text(
                           "Sign Up",
                           style: TextStyle(color: AppColors.primaryOrange),
