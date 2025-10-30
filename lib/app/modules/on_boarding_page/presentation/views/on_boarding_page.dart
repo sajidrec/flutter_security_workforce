@@ -23,24 +23,32 @@ class OnBoardingPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          // BackdropFilter for blur effect
+          // BackdropFilter with gradient for darkening effect at the bottom
           BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
             child: Container(
-              color: AppColors.primarySteelBlue.withAlpha(
-                (255 * 0.000).round(),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.transparent,
+                    // Top part (transparent)
+                    AppColors.primaryBlack,
+                    // Bottom part (darker)
+                  ],
+                  stops: [0.01, 1.0], // Gradual change towards the bottom
+                ),
               ),
             ),
           ),
           // Using Align and Padding properly to handle bottom positioning
           Align(
-            alignment: Alignment.bottomLeft, // Align to the bottom center
+            alignment: Alignment.bottomLeft, // Align to the bottom left
             child: Padding(
               padding: EdgeInsets.all(20.w),
-              // Adjust this value to your needs
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                // Prevents Column from taking too much space
                 children: [
                   RichText(
                     text: TextSpan(
@@ -68,7 +76,6 @@ class OnBoardingPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 32.h),
-
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -90,7 +97,6 @@ class OnBoardingPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16.h),
-
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -111,9 +117,7 @@ class OnBoardingPage extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   SizedBox(height: 12.h),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -132,6 +136,7 @@ class OnBoardingPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: 12.h),
                 ],
               ),
             ),

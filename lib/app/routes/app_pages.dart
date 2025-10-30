@@ -1,5 +1,7 @@
 import 'package:flutter_security_workforce/app/modules/auth/signup_page/binding/signup_page_binding.dart';
+import 'package:flutter_security_workforce/app/modules/auth/signup_page/binding/verify_registration_otp_page_binding.dart';
 import 'package:flutter_security_workforce/app/modules/auth/signup_page/views/signup_page.dart';
+import 'package:flutter_security_workforce/app/modules/auth/signup_page/views/verify_registration_otp_page.dart';
 import 'package:flutter_security_workforce/app/modules/on_boarding_page/presentation/bindings/on_boarding_get_started_page_binding.dart';
 import 'package:flutter_security_workforce/app/modules/on_boarding_page/presentation/bindings/on_boarding_page_binding.dart';
 import 'package:flutter_security_workforce/app/modules/on_boarding_page/presentation/views/on_boarding_get_started_page.dart';
@@ -41,6 +43,12 @@ class AppPages {
       name: AppRoutes.signupRoute,
       page: () => SignupPage(),
       binding: SignupPageBinding(),
+    ),
+
+    GetPage(
+      name: AppRoutes.verifyRegistrationOtpRoute,
+      page: () => VerifyRegistrationOtpPage(),
+      binding: VerifyRegistrationOtpPageBinding(),
     ),
   ];
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_security_workforce/app/core/constants/app_assets.dart';
 import 'package:flutter_security_workforce/app/modules/auth/signup_page/controllers/signup_page_controller.dart';
+import 'package:flutter_security_workforce/app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/constants/app_colors.dart';
@@ -35,7 +36,7 @@ class SignupPage extends StatelessWidget {
                         style: TextStyle(color: AppColors.secondaryNavyBlue),
                       ),
                       TextSpan(
-                        text: "your Account",
+                        text: "Your Account",
                         style: TextStyle(color: AppColors.primaryOrange),
                       ),
                     ],
@@ -87,7 +88,9 @@ class SignupPage extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed(AppRoutes.verifyRegistrationOtpRoute);
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.secondaryNavyBlue,
           foregroundColor: AppColors.primaryWhite,
