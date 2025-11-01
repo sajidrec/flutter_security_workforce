@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_security_workforce/app/core/constants/app_assets.dart';
-import 'package:flutter_security_workforce/app/modules/auth/signup_page/controllers/signup_page_controller.dart';
 import 'package:flutter_security_workforce/app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/constants/app_colors.dart';
+import '../../../../../core/constants/app_colors.dart';
+import '../controllers/signup_page_controller.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -63,14 +63,21 @@ class SignupPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text("Already have an account? "),
-                              Text(
-                                "Sign in",
-                                style: TextStyle(
-                                  color: AppColors.primaryOrange,
+
+                              InkWell(
+                                onTap: () {
+                                  Get.toNamed(AppRoutes.loginRoute);
+                                },
+                                child: Text(
+                                  "Sign in",
+                                  style: TextStyle(
+                                    color: AppColors.primaryOrange,
+                                  ),
                                 ),
                               ),
                             ],
                           ),
+                          SizedBox(height: 16.h),
                         ],
                       ),
                     );
