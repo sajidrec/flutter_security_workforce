@@ -10,4 +10,5 @@ abstract class AppRoutes {
   static const String forgetPassRoute = "/forgetPassRoute";
   static const String verifyForgetPassRoute = "/verifyForgetPassRoute";
   static const String newPassRoute = "/newPassRoute";
+  static const String profileVerificationRoute = "/profileVerificationRoute";
 }

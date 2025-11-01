@@ -10,6 +10,8 @@ import 'package:flutter_security_workforce/app/modules/on_boarding_page/presenta
 import 'package:flutter_security_workforce/app/modules/on_boarding_page/presentation/bindings/on_boarding_page_binding.dart';
 import 'package:flutter_security_workforce/app/modules/on_boarding_page/presentation/views/on_boarding_get_started_page.dart';
 import 'package:flutter_security_workforce/app/modules/on_boarding_page/presentation/views/on_boarding_page.dart';
+import 'package:flutter_security_workforce/app/modules/profile_verification_page/presentation/binding/profile_verification_page_binding.dart';
+import 'package:flutter_security_workforce/app/modules/profile_verification_page/presentation/views/profile_verification_page.dart';
 import 'package:flutter_security_workforce/app/modules/splash_page/presentation/binding/slpash_page_binding.dart';
 import 'package:flutter_security_workforce/app/modules/splash_page/presentation/views/splash_page.dart';
 import 'package:get/get.dart';
@@ -81,6 +83,12 @@ class AppPages {
       name: AppRoutes.newPassRoute,
       page: () => NewPasswordPage(),
       binding: NewPasswordPageBinding(),
+    ),
+
+    GetPage(
+      name: AppRoutes.profileVerificationRoute,
+      page: () => ProfileVerificationPage(),
+      binding: ProfileVerificationPageBinding(),
     ),
   ];
 }

@@ -94,7 +94,9 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.offAllNamed(AppRoutes.profileVerificationRoute);
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.secondaryNavyBlue,
                           foregroundColor: AppColors.primaryWhite,
